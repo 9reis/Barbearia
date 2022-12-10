@@ -21,7 +21,7 @@ public class Cliente extends Pessoa {
         this.cep = cep;
     }
 
-    public Cliente(String endereço, String cep, int id, String nome, char sexo, String dataNascimento, String telefone, String email, String rg) {
+    public Cliente(int id,String nome, char sexo, String dataNascimento, String telefone, String email,String rg,String endereço, String cep) {
         super(id, nome, sexo, dataNascimento, telefone, email, rg);
         this.endereço = endereço;
         this.cep = cep;
