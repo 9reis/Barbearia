@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Rubem
  */
-public class AgendaHelper {
+public class AgendaHelper implements IHelper{
     private final Agenda view; 
 
     public AgendaHelper(Agenda view) {
@@ -66,6 +66,16 @@ public class AgendaHelper {
 
     public void setarValor(float valor) {
         view.getTextValor().setText(valor+"");
+    }
+
+    @Override
+    public Object obterModelo() {
+        
+    }
+
+    @Override
+    public void limparTela() {
+        
     }
      
     
