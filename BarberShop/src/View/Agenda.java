@@ -7,7 +7,9 @@ package View;
 
 import Controller.AgendaController;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -105,6 +107,11 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(TextId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 280, 40));
 
+        jComboboxCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboboxClienteActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboboxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 280, 40));
 
         jComboboxServico.addItemListener(new java.awt.event.ItemListener() {
@@ -128,7 +135,11 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(TextValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 280, 40));
 
-        TextFormatedData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
+        TextFormatedData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFormatedDataActionPerformed(evt);
+            }
+        });
         getContentPane().add(TextFormatedData, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 280, 40));
 
         TextFormatedHora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
@@ -194,6 +205,14 @@ public class Agenda extends javax.swing.JFrame {
     private void jComboboxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboboxServicoItemStateChanged
         this.controller.atualizaValor();
     }//GEN-LAST:event_jComboboxServicoItemStateChanged
+
+    private void jComboboxClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboboxClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboboxClienteActionPerformed
+
+    private void TextFormatedDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFormatedDataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFormatedDataActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,5 +311,39 @@ public class Agenda extends javax.swing.JFrame {
     public void setTextValor(JTextField TextValor) {
         this.TextValor = TextValor;
     }
+
+    public JFormattedTextField getTextFormatedData() {
+        return TextFormatedData;
+    }
+
+    public void setTextFormatedData(JFormattedTextField TextFormatedData) {
+        this.TextFormatedData = TextFormatedData;
+    }
+
+    public JFormattedTextField getTextFormatedHora() {
+        return TextFormatedHora;
+    }
+
+    public void setTextFormatedHora(JFormattedTextField TextFormatedHora) {
+        this.TextFormatedHora = TextFormatedHora;
+    }
+
+    public JTextField getTextId() {
+        return TextId;
+    }
+
+    public void setTextId(JTextField TextId) {
+        this.TextId = TextId;
+    }
+
+    public JTextArea getTextObservacao() {
+        return TextObservacao;
+    }
+
+    public void setTextObservacao(JTextArea TextObservacao) {
+        this.TextObservacao = TextObservacao;
+    }
    
+    
+    
 }

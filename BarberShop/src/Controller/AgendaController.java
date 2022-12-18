@@ -57,9 +57,16 @@ public class AgendaController {
     }
     
     public void agendar(){
+        
         //Buscar Objeto Agendamento da Tela
+        Agendamento agendamento = helper.obterModelo();
         
         //Salvar Objeto no Banco 
+        new AgendamentoDAO().insert(agendamento);
+        
+        // Inserir elemento na tabela
+        atualizaTabela();
+        helper.limparTela();
     }
     
 }
